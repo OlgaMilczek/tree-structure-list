@@ -1,6 +1,6 @@
 {
     "tree title": "Tree name", 
-    "description": "description",
+    "multi-line description": ["description"],
     "type": "checkbox group",
     "members": [
         {

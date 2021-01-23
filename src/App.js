@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
 
-//React loarder import 
+//React loader import 
 import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 import fetchData from './components/fetchData';
 import ErrorMessage from './components/ErrorMessage';
+import TreeRender from './components/TreeRender';
 
 import './scss/App.scss';
 
 function App() {
-    const [isLoading, setLoading] = useState(true);
     const [errorMessage, setError] = useState(null);
     const [listTree, setListTree] = useState(undefined);
 
@@ -19,14 +19,17 @@ function App() {
     };
 
     useEffect(() => {
+        console.log('list tree', listTree);
+
         if (listTree === undefined) {
-            fetchData().then(response => { setListTree(response); })
-                .catch(error => handleError(error))
-                .finally(setLoading(false));
+            fetchData().then(response => {
+                console.log('response', response);
+                setListTree(response);
+            })
+                .catch(error => handleError(error));
         }
     }, [listTree]);
 
-    console.log(listTree);
 
     if ( errorMessage )  {
         return (
@@ -34,7 +37,7 @@ function App() {
         );
     }
 
-    else if (isLoading) {
+    else if (listTree === undefined) {
         return (
             <Loader 
                 className = 'flex-center'
@@ -49,7 +52,7 @@ function App() {
     
     return (
         <div className="App">
-            
+            <TreeRender tree={listTree}/>
         </div>
     );
 }
