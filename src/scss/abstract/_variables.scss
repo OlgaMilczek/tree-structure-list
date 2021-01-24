@@ -1,7 +1,15 @@
 //Colors 
 
 $text-color: #333;
-$color-background-light: #eee;
+$text-color-secondary: #555;
+$color-background-light: #fff;
 $color-background-dark: #ccc;
 
 $color-primary: #2998ff;
+$color-primary-light: lighten($color-primary, 15%);
+
+$indentation: 3rem;
+$padding-li: .5rem;
+$margin-button: 1rem;
+$input-size: 2rem;
+$icon-size: 1.6rem;

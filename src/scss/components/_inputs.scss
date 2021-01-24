@@ -1,0 +1,45 @@
+.input {
+    display: none;
+
+    &__label {
+        display: flex;
+        align-items: center;
+    }
+
+    &__button {
+        background-color: $color-primary;
+        width: $input-size;
+        height: $input-size;
+        position: relative;
+        margin-right: $margin-button;
+        z-index: 2;
+
+        &.--radio {
+            border-radius: 50%;
+        }
+    }
+
+    &__icon-plus,
+    &__icon-minus {
+        @include center-horizontal-and-vertical;
+
+        font-size: $icon-size;
+    }
+
+    &__icon-plus {
+        color: transparent;
+    }
+
+    &__icon-minus {
+        color: $color-background-light;
+    }
+
+
+&:checked ~ &__label > &__button > &__icon-plus {
+    color: $color-background-light;
+}
+
+&:checked ~ &__label > &__button > &__icon-minus {
+    color: transparent;
+}
+}

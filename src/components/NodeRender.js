@@ -1,16 +1,17 @@
 import MembersContainer from './MembersContainer';
 import InputLabel from './InputLabel';
 
-export default function NodeRender( { inputType, groupName, groupMembers, groupId, groupDescription } ) {
-    let labelId = `${groupName}-${groupId}`;
+export default function NodeRender( {parentLabel, inputType, groupName, groupMembers, groupId, groupDescription } ) {
+    let labelId = `${parentLabel}-${groupName}-${groupId}`;
+
+    const labelText = <h4 className='heading__node'>{groupName}</h4>;
 
     return (
-        <li>
-            <input type={inputType} id={labelId} name = {groupName} className = 'tree__input' />
-            <InputLabel inputType = {inputType} labelId = {labelId} />
-            <h4>{groupName}</h4>
-            <p>{groupDescription}</p>
-            <MembersContainer members = { groupMembers }/>
+        <li className ='tree__node'>
+            <input type={inputType} id={labelId} name = {parentLabel} className = 'input'/>
+            <InputLabel inputType = {inputType} labelId = {labelId} labelText={labelText}/>
+            <p className='description__node' >{groupDescription}</p>
+            <MembersContainer members = { groupMembers } parentLabel = {labelId} />
         </li>
     );
 }

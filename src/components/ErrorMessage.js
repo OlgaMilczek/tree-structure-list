@@ -1,6 +1,6 @@
 export default function ErrorMessage( { error }) {
     return <div className='error'>
-        <h1>Sorry, an error occurred...</h1>
-        <p className='text-danger'>{error.message}</p>
+        <h1 className='error__heading'>Sorry, an error occurred...</h1>
+        <p className='error__text'>{error.message}</p>
     </div>;
 }

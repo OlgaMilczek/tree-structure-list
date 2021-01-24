@@ -1,3 +1,48 @@
+@mixin center-horizontal-and-vertical {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin horizontal-line {
+    content: "";
+    position: absolute;
+    font-size: inherit;
+    top: 0;
+    left: calc(( #{$padding-li} + #{$indentation} * 2 - #{$input-size}/2) * -1);
+    transform: translateY(-50%);
+    border-bottom: 1px solid $text-color-secondary;
+    border-left: 1px solid $text-color-secondary;
+    width: calc(#{$indentation} * 2  - #{$input-size}/2);
+    height: 100%;
+    z-index: 3;
+}
+
+@mixin vertical-line {
+    content: "";
+    position: absolute;
+    font-size: inherit;
+    top: calc(#{$input-size} + #{$padding-li});
+    left: calc(#{$input-size}/2 + #{$padding-li});
+    border-left: 1px solid $text-color-secondary;
+    width: 1px;
+    height: calc(100% - #{$input-size});
+    z-index: 1;
+}
+
+@mixin line-shade {
+    background-color: $color-background-light;
+    content: "";
+    position: absolute;
+    font-size: inherit;
+    top: $padding-li;
+    left: calc(( #{$padding-li} + #{$indentation} * 2) * -1);
+    width:  #{$input-size};
+    height: calc(100% + #{$padding-li});
+    z-index: 2;
+}
+
 //Media query manager - desktop first
 
 /* Break point: 

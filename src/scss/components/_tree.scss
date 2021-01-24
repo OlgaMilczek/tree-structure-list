@@ -1,0 +1,62 @@
+.tree {
+    position: relative;
+    padding: $padding-li;
+    padding-right: 0;
+
+    ul {
+        margin-left: $indentation;
+    }
+    
+    li {
+        padding: $padding-li;
+        padding-right: 0;
+        list-style: none;
+        margin-left: $indentation;
+        position: relative;
+
+    }
+
+    &::after {
+        @include vertical-line;
+    }
+
+    & ul li:last-child::before {
+        @include line-shade;
+    }
+
+    &__node {
+
+        & label {
+            position: relative;
+        }
+
+        &  label::before {
+            @include horizontal-line;
+        }
+
+        &::after {
+            @include vertical-line;
+        }
+
+        & ul li:last-child::before {
+            @include line-shade;
+        }
+
+    }
+
+    &__endpoint {
+
+        & > *:first-child {
+            position: relative;
+        }
+
+        & > *:first-child::before {
+            @include horizontal-line;
+        }
+
+        &.--odd{
+            background-color: $color-background-dark;
+        }
+    }
+    
+}

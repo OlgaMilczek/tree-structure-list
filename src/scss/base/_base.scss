@@ -26,8 +26,20 @@ html {
 body {
     box-sizing: border-box;
     padding: 3rem;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, .75), rgba($color-primary, .75)), url('../img/tree.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat no-repeat;
+    min-height: 100vh;
 
     @include respond(tab-port) {
         padding: 0; // 1rem = 8px 
     }
+}
+
+#root {
+    margin: auto;
+    background-color: $color-background-light;
+    width: fit-content;
+    padding: 3rem;
 }

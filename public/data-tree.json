@@ -80,51 +80,54 @@
                             "type": "endpoint"
                         }
                     ]
+                }
+                
+            ]
+        },
+        {
+            "name": "Pooddział 2", 
+            "type": "radio group",
+            "members": [
+                {
+                    "name": "Zespół 1",
+                    "description": "HR", 
+                    "type": "endpoint"
+                }, 
+                {
+                    "name": "Zespół 2",
+                    "description": "Marketing", 
+                    "type": "endpoint"
                 },
                 {
-                    "name": "Pooddział 2", 
-                    "type": "radio group",
+                    "name": "Zespół 3",
+                    "description": "Analitycy", 
+                    "type": "endpoint"
+                },
+                {
+                    "name": "Zespół 4",
+                    "description": "Programiści", 
+                    "type": "checkbox group",
                     "members": [
                         {
-                            "name": "Zespół 1",
-                            "description": "HR", 
-                            "type": "endpoint"
-                        }, 
-                        {
-                            "name": "Zespół 2",
-                            "description": "Marketing", 
+                            "name": "Podzespół 4.1",
+                            "description": "Front-end", 
                             "type": "endpoint"
                         },
                         {
-                            "name": "Zespół 3",
-                            "description": "Analitycy", 
+                            "name": "Podzespół 4.2",
+                            "description": "Middle-end", 
                             "type": "endpoint"
                         },
                         {
-                            "name": "Zespół 4",
-                            "description": "Programiści", 
-                            "type": "checkbox group",
-                            "members": [
-                                {
-                                    "name": "Podzespół 4.1",
-                                    "description": "Front-end", 
-                                    "type": "endpoint"
-                                },
-                                {
-                                    "name": "Podzespół 4.2",
-                                    "description": "Middle-end", 
-                                    "type": "endpoint"
-                                },
-                                {
-                                    "name": "Podzespół 4.3",
-                                    "description": "Back-end", 
-                                    "type": "endpoint"
-                                }
-                            ]
+                            "name": "Podzespół 4.3",
+                            "description": "Back-end", 
+                            "type": "endpoint"
                         }
                     ]
                 }
             ]
         }
+
     ]
+
 }

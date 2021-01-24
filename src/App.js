@@ -19,13 +19,8 @@ function App() {
     };
 
     useEffect(() => {
-        console.log('list tree', listTree);
-
         if (listTree === undefined) {
-            fetchData().then(response => {
-                console.log('response', response);
-                setListTree(response);
-            })
+            fetchData().then(response => setListTree(response))
                 .catch(error => handleError(error));
         }
     }, [listTree]);

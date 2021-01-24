@@ -1,0 +1,12 @@
+.error {
+    @include center-horizontal-and-vertical;
+    padding: 3rem;
+
+    &__heading {
+        font-size: 3rem;
+    }
+
+    &__text {
+        color: #6b2e2e;
+    }
+}
