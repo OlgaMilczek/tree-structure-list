@@ -1,0 +1,133 @@
+{
+    "tree title": "Tree name", 
+    "multi-line description": ["description"],
+    "type": "checkbox group",
+    "members": [
+        {
+            "name": "Pooddział 1", 
+            "type": "radio group",
+            "members": [
+                {
+                    "name": "Zespół 1",
+                    "description": "HR", 
+                    "type": "endpoint"
+                }, 
+                {
+                    "name": "Zespół 2",
+                    "description": "Marketing", 
+                    "type": "endpoint"
+                },
+                {
+                    "name": "Zespół 3",
+                    "description": "Analitycy", 
+                    "type": "checkbox group",
+                    "members": [
+                        {
+                            "name": "Podzespół 3.1",
+                            "description": "Kalendarz", 
+                            "type": "endpoint"
+                        },
+                        {
+                            "name": "Podzespół 3.2",
+                            "description": "Kokpit", 
+                            "type": "endpoint"
+                        },
+                        {
+                            "name": "Podzespół 3.3",
+                            "description": "Widok", 
+                            "type": "endpoint"
+                        },
+                        {
+                            "name": "Podzespół 3.4",
+                            "description": "Różnorodność", 
+                            "type": "endpoint"
+                        },
+                        {
+                            "name": "Podzespół 3.5",
+                            "description": "Szukaj", 
+                            "type": "endpoint"
+                        }
+                    ]
+                },
+                {
+                    "name": "Zespół 4",
+                    "description": "Programiści", 
+                    "type": "checkbox group",
+                    "members": [
+                        {
+                            "name": "Podzespół 4.1",
+                            "description": "Front-end", 
+                            "type": "endpoint"
+                        },
+                        {
+                            "name": "Podzespół 4.2",
+                            "description": "Middle front-end", 
+                            "type": "endpoint"
+                        },
+                        {
+                            "name": "Podzespół 4.3",
+                            "description": "Middle-end", 
+                            "type": "endpoint"
+                        },
+                        {
+                            "name": "Podzespół 4.4",
+                            "description": "Middle back-end", 
+                            "type": "endpoint"
+                        },
+                        {
+                            "name": "Podzespół 4.5",
+                            "description": "Back-end", 
+                            "type": "endpoint"
+                        }
+                    ]
+                }
+                
+            ]
+        },
+        {
+            "name": "Pooddział 2", 
+            "type": "radio group",
+            "members": [
+                {
+                    "name": "Zespół 1",
+                    "description": "HR", 
+                    "type": "endpoint"
+                }, 
+                {
+                    "name": "Zespół 2",
+                    "description": "Marketing", 
+                    "type": "endpoint"
+                },
+                {
+                    "name": "Zespół 3",
+                    "description": "Analitycy", 
+                    "type": "endpoint"
+                },
+                {
+                    "name": "Zespół 4",
+                    "description": "Programiści", 
+                    "type": "checkbox group",
+                    "members": [
+                        {
+                            "name": "Podzespół 4.1",
+                            "description": "Front-end", 
+                            "type": "endpoint"
+                        },
+                        {
+                            "name": "Podzespół 4.2",
+                            "description": "Middle-end", 
+                            "type": "endpoint"
+                        },
+                        {
+                            "name": "Podzespół 4.3",
+                            "description": "Back-end", 
+                            "type": "endpoint"
+                        }
+                    ]
+                }
+            ]
+        }
+
+    ]
+
+}
