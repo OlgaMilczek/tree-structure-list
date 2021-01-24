@@ -12,6 +12,7 @@ export default function NodeRender( {parentLabel, inputType, groupName, groupMem
             <InputLabel inputType = {inputType} labelId = {labelId} labelText={labelText}/>
             <p className='description__node' >{groupDescription}</p>
             <MembersContainer members = { groupMembers } parentLabel = {labelId} />
+            <div className = 'vertical-line'></div>
         </li>
     );
 }

@@ -18,6 +18,7 @@ export default function TreeRender({tree}) {
             <InputLabel parentLabel = {labelId} inputType = {inputType} labelId = {labelId} labelText = {labelText}/>
             {descriptionContainer}
             <MembersContainer  members={tree.members}  parentLabel={labelId}/>
+            <div className = 'vertical-line'></div>
         </div>
     );
 }

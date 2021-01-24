@@ -16,7 +16,8 @@
 
     }
 
-    &::after {
+    .vertical-line {
+        display: none;
         @include vertical-line;
     }
 
@@ -25,7 +26,6 @@
     }
 
     &__node {
-
         & label {
             position: relative;
         }
@@ -45,7 +45,6 @@
     }
 
     &__endpoint {
-
         & > *:first-child {
             position: relative;
         }
@@ -58,5 +57,17 @@
             background-color: $color-background-dark;
         }
     }
+
+    //Handling closing.
+    li {
+        display: none;
+    }
     
+    input:checked ~ label ~ ul > li {
+        display: block;
+    }
+
+    input:checked ~ label ~ ul ~ .vertical-line  {
+        display: block;
+    }
 }

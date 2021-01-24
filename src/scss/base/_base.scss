@@ -17,10 +17,6 @@ html {
     @include respond(tab-port) {
         font-size: 50%; // 1rem = 8px 
     }
-
-    @include respond(big-desktop) {
-        font-size: 75%; // 1rem = 12px 
-    }
 }
 
 body {
@@ -28,18 +24,26 @@ body {
     padding: 3rem;
     background-image: linear-gradient(to right bottom, rgba($color-primary-light, .75), rgba($color-primary, .75)), url('../img/tree.jpg');
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
     min-height: 100vh;
 
-    @include respond(tab-port) {
-        padding: 0; // 1rem = 8px 
+    @include respond(phone) {
+        padding: 2rem;
     }
 }
 
 #root {
     margin: auto;
     background-color: $color-background-light;
-    width: fit-content;
+    width: 60%;
     padding: 3rem;
+
+    @include respond(tab-port) {
+        width: 80%;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+    }
 }

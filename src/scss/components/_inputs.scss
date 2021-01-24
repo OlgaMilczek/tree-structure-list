@@ -17,6 +17,10 @@
         &.--radio {
             border-radius: 50%;
         }
+
+        &.--checkbox {
+            border-radius: 3px;
+        }
     }
 
     &__icon-plus,
@@ -27,19 +31,19 @@
     }
 
     &__icon-plus {
-        color: transparent;
+        color: $color-background-light;
     }
 
     &__icon-minus {
-        color: $color-background-light;
+        color: transparent;
     }
 
 
 &:checked ~ &__label > &__button > &__icon-plus {
-    color: $color-background-light;
+    color: transparent;
 }
 
 &:checked ~ &__label > &__button > &__icon-minus {
-    color: transparent;
+    color: $color-background-light;
 }
 }
